@@ -24,4 +24,5 @@ clean:
 	$(CC) $(CFLAGS) -c $< -o $@ 
 
 $(TARGET): $(OBJS)
+	if not exist bin ( mkdir bin )
 	$(CC) $^ -o $@ $(LDFLAGS)
